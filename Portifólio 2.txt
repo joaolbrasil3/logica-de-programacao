@@ -1,0 +1,92 @@
+Prática 1
+
+algoritmo "CalculadoraBasica"
+
+var
+    num1, num2, resultado: real
+    opcao: inteiro
+
+inicio
+
+    escreval("Digite o primeiro número: ")
+    leia(num1)
+
+    escreval("Digite o segundo número: ")
+    leia(num2)
+
+    escreval("")
+    escreval("Escolha uma operação:")
+    escreval("1- Soma")
+    escreval ("2- Subtração")
+    escreval("3- Multiplicação")
+    escreval("4- Divisão")
+    escreva("Opção: ")
+    leia(opcao)
+
+    escolha opcao
+      caso 1
+        resultado <- num1 + num2
+        escreval("Resultado da soma: ", resultado)
+      caso 2
+        resultado <- num1 - num2
+        escreval("Resultado da subtração:", resultado)
+      caso 3
+       resultado <- num1 * num2
+       escreval("Resultado da multiplicação:", resultado)
+      caso 4
+        se num2 <> 0 entao
+          resultado <- num1 / num2
+	  escreval("Resultado da divisão:", resultado)
+	se nao
+          escreval("Erro: divisão por 0 não é permitida.")
+        fimse
+      outrocaso
+        escreval("Opção inválida!")
+    fimescolha
+fimalgoritmo
+
+Prática 2
+
+algoritmo "Tabuada"
+
+var
+   numero, i: inteiro
+
+inicio
+
+   escreva("Digite um numero inteiro positivo: ")
+   leia(numero)
+
+   escreval("Tabuada do ", numero, ":")
+
+   para i de 1 ate 10 faca
+      escreval(numero, " x ", i, " = ", numero * i)
+   fimpara
+
+fimalgoritmo
+
+Prática 3
+
+algoritmo "Sistema_Login"
+
+var
+   senhaCorreta, senhaDigitada: caractere
+
+inicio
+
+   senhaCorreta <- "senha123"
+
+   escreva("Digite a senha: ")
+   leia(senhaDigitada)
+
+   enquanto senhaDigitada <> senhaCorreta faca
+
+      escreval("Senha incorreta, tente novamente.")
+      escreva("Digite a senha: ")
+      leia(senhaDigitada)
+
+   fimenquanto
+
+   escreval("Acesso Liberado! Bem-vindo!")
+
+fimalgoritmo
