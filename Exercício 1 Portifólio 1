@@ -1,5 +1,3 @@
-Prática 1
-
 algoritmo "CalculadoraBasica"
 
 var
@@ -43,50 +41,4 @@ inicio
       outrocaso
         escreval("Opção inválida!")
     fimescolha
-fimalgoritmo
-
-Prática 2
-
-algoritmo "Tabuada"
-
-var
-   numero, i: inteiro
-
-inicio
-
-   escreva("Digite um numero inteiro positivo: ")
-   leia(numero)
-
-   escreval("Tabuada do ", numero, ":")
-
-   para i de 1 ate 10 faca
-      escreval(numero, " x ", i, " = ", numero * i)
-   fimpara
-
-fimalgoritmo
-
-Prática 3
-
-algoritmo "Sistema_Login"
-
-var
-   senhaCorreta, senhaDigitada: caractere
-
-inicio
-
-   senhaCorreta <- "senha123"
-
-   escreva("Digite a senha: ")
-   leia(senhaDigitada)
-
-   enquanto senhaDigitada <> senhaCorreta faca
-
-      escreval("Senha incorreta, tente novamente.")
-      escreva("Digite a senha: ")
-      leia(senhaDigitada)
-
-   fimenquanto
-
-   escreval("Acesso Liberado! Bem-vindo!")
-
 fimalgoritmo
