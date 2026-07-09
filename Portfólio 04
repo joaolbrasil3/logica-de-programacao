@@ -1,0 +1,51 @@
+programa
+{
+    inclua biblioteca Util
+    inclua biblioteca Matematica
+    inclua biblioteca Texto
+    inclua biblioteca Calendario
+
+    funcao inicio()
+    {
+        cadeia nome
+        inteiro numeroSorteado
+        real numero
+
+        escreva("=== CADASTRO DO JOGADOR ===\n")
+
+        escreva("Digite seu nome: ")
+        leia(nome)
+
+        // BIBLIOTECA TEXTO
+        escreva("\nNome em maiusculas: ", Texto.caixa_alta(nome))
+        escreva("\nQuantidade de letras: ", Texto.numero_caracteres(nome))
+
+        // BIBLIOTECA UTIL
+        numeroSorteado = Util.sorteia(1,100)
+
+        escreva("\n\nSorteando um numero...")
+        Util.aguarde(2000)
+
+        escreva("\nNumero sorteado: ", numeroSorteado)
+
+        escreva("\nTempo do programa: ", Util.tempo_decorrido(), " ms")
+
+        escreva("\n\nDigite um numero real: ")
+        leia(numero)
+
+        // BIBLIOTECA MATEMATICA
+        escreva("\nQuadrado do numero: ", Matematica.potencia(numero,2))
+        escreva("\nRaiz quadrada: ", Matematica.raiz(numero,2))
+
+        // BIBLIOTECA CALENDARIO
+        escreva("\n\nData de hoje: ")
+        escreva(Calendario.dia_mes_atual(), "/")
+        escreva(Calendario.mes_atual(), "/")
+        escreva(Calendario.ano_atual())
+
+        escreva("\nHora atual: ")
+        escreva(Calendario.hora_atual(), ":")
+        escreva(Calendario.minuto_atual(), ":")
+        escreva(Calendario.segundo_atual())
+    }
+}
